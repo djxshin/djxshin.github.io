@@ -1,2 +1,1 @@
 # djxshin.github.io
-Portfolio

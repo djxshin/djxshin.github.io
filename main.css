@@ -10,7 +10,7 @@
      /* defining how many columns there will be */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     /* define how many rows there will be */
-    grid-template-rows: 50px 60px 150px 75px 150px 700px 250px 350px; ;
+    grid-template-rows: 50px 700px 525px 100px 150px 700px 250px 350px; ;
     grid-template-areas: 
     /* name our template section */
     "nav nav nav nav"
@@ -27,17 +27,159 @@
 }
 .nav{
     grid-area: nav;
+    display: flex;
+    /* flex to have the nav A-links spaced evenly */
+    justify-content: space-evenly;
+    /* spaced evenly */
+    opacity: .8;
+    position: fixed;
+    /* wanted the nav bar to stay along the entire page */
+    width: 100%;
+     /* with fixed position, had to reset the x-axis */
+     background-color: rgba(255, 0, 0, 0.596);
 }
-.INS{
+a{
+    margin-top:10px;
+    margin-bottom:15px;
+    /* wanted to even out the link to make it look like a box logo */
+    text-decoration: none;
+    color:white;
+    background-color:red;
+    margin-top:10px;
+    /* Nav links centered with margin, made to looks like box logo */  
+}
+.INFO{
     grid-area: INS;
     background:rgba(0, 0, 0, 0.644);
     margin-bottom:-15px;
 }
+#movingFont{
+    /* keyframe font that moves across the header */
+    font-weight: bold;
+    /* thick font */
+    text-shadow: 3px 3px 0px #000;
+    color:white;
+    /* color of font */
+    font-family: bold italic;
+    /* close to original supreme font */
+    font-size:35px;
+    animation:move 7s;
+    /* keyfram animation name, span over 10secs, no repeat */
+    transition:1s;
+    /* transition to make the cycle smoother */
+    text-align: center;
+}
+@keyframes move {
+    /* 0% is the point at which is starts to animate*/
+    0% {
+        margin-left:-700px;
+        /* wanted the keyframe to start at the leftside  */
+     
+    }
+    50%{
+        margin-left:650px;
+        /* chose 50% for smoother finish, 900px to travel to rightside
+        and finish back at the center (content already centered) */
+   
+      
+    }
+    
+}
+.photoContainer{
+display:flex;
+justify-content: center;
+}
+.photo{
+    width:300px;
+    height:200px;
+   
+    background-image: url(./images/profilePic.jpg);
+    background-size: 100% 100%;
+    margin-top: 50px;
+    
+}
+span{
+    color:rgba(233, 159, 159, 0.808);
+    
+}
+
+.iconContainer{
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 35px;
+}
+.icon1{
+height:100px;
+width:100px;
+border:solid;
+background-image: url(./images/emailicon.png);
+background-size: 100% 100%;
+}
+
+.icon2{
+    height:100px;
+    width:100px;
+    border:solid;
+    background-image: url(./images/phoneiconpng.png);
+    background-size: 100% 100%;
+}
+.icon3{
+    height:100px;
+width:100px;
+border:solid;
+background-image: url(./images/githubicon.png);
+background-size: 100% 100%;
+}
+.icon4{
+    height:100px;
+    width:100px;
+    border:solid;
+    background-image: url(./images/GAicon.jpeg);
+    background-size: 100% 100%;
+}
+.icon5{
+    height:100px;
+    width:100px;
+    border:solid;
+    background-image: url(./images/linkedinicon.png);
+    background-size: 100% 100%;
+}
+.infoContainer{
+    display:flex;
+    justify-content: space-evenly;
+}
+.iconINFO{
+   
+    width:140px;
+    height:35px;
+   
+    text-align: center;
+    font-weight: bold;
+    color:white;
+    font-size: 20px;
+}
+#brand{
+    margin-left: 100px;
+    margin-right:100px;
+    font-size: 25px;
+    
+   
+}
+#aboutMe{
+    text-align: center;
+    font-weight: bold;
+}
 .header{
     grid-area:header;
     background-color: rgba(255, 0, 0, 0.596);
-    opacity:0.3;
+    opacity:0.7;
     /* start out at 0 for hover  */
+}
+.header:hover{
+    opacity:1;
+    /* appears from 0 to 1 from hovering */
+    transition:2s;
+    /* smooth out the transition */
 }
 .key{
     grid-area:key;
@@ -72,18 +214,6 @@
     grid-area:sk;
 }
 
-#info{
-    text-align:center;
-    font-size: 20px;
-    margin-top:18px;
-   
-}
-.header:hover{
-    opacity:1;
-    /* appears from 0 to 1 from hovering */
-    transition:2s;
-    /* smooth out the transition */
-}
 .sum:hover{
     opacity:1;
     /* appears from 0 to 1 from hovering */
@@ -101,38 +231,8 @@
     /* don't want to take attention away from background pic. */
     
 }
-#summary{
-    /* keyframe font that moves across the header */
-    font-weight: bold;
-    /* thick font */
-    text-shadow: 3px 3px 0px #000;
-    color:white;
-    /* color of font */
-    font-family: bold italic;
-    /* close to original supreme font */
-    font-size:25px;
-    animation:move 25s;
-    /* keyfram animation name, span over 10secs, no repeat */
-    transition:2s;
-    /* transition to make the cycle smoother */
-}
 
-@keyframes move {
-    /* 0% is the point at which is starts to animate*/
-    0% {
-        margin-left:-1000px;
-        /* wanted the keyframe to start at the leftside  */
-     
-    }
-    50%{
-        margin-left:900px;
-        /* chose 50% for smoother finish, 900px to travel to rightside
-        and finish back at the center (content already centered) */
-   
-      
-    }
-    
-}
+
 #hoverinstruct{
     color:white;
     font-weight:bold;

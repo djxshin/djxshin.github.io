@@ -1,58 +1,321 @@
-
-   
-.container > div{
-    border:solid;
-    /* making all the div have borders */
+* {
+    scroll-behavior: smooth;
 }
 
-.container{
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+.contentContainer {
+    height: 98vh;
+    width: 97vw;
+    color: white;
+    background-color: black;
+}
+
+
+.firstSlideContainer {
+    width: 100%;
+    height: 50vw;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
     display: grid;
-     /* defining how many columns there will be */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* define how many rows there will be */
-    grid-template-rows: 50px 700px 625px 100px 150px 700px 250px 350px; ;
-    grid-template-areas: 
-    /* name our template section */
-    "nav nav nav nav"
-    "INS INS INS INS"
-    "header header header header"
-    "key key key key"
-    "sum sum sum sum"
-    "para para para para"
-    "ed ed ed ed"
-    "sk sk sk sk";
-    grid-gap: 5px;
-    /* gap between grids */
+    grid-template-columns: 100vw 100vw;
+    z-index: 5;
+}
+
+#nameSplash {
+    display: flex;
+    flex: 1;
+    margin: 0;
+}
+
+#bam {
+   
+    background-position: center;
+    background-size: 100% 100%;
+    border:solid white;
+    /* Animation Stuff */
+    animation: creativeFadeIn ease 1.5s;
+    animation-fill-mode: forwards;
+  width:100vw;
+  overflow: hidden;
+   
+
+}
+
+#welcome {
+    font-size: 100px;
+    opacity: 0;
+    /* Animation Stuff */
+    animation: creativeFadeIn ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+#titleName {
+    opacity: 0;
+    /* Animation Stuff */
+    animation: creativeFadeIn ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+#titleName2 {
+    opacity: 0;
+    /* Animation Stuff */
+    animation: creativeFadeIn ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 3;
+}
+
+#titleName3 {
+    opacity: 0;
+    /* Animation Stuff */
+    animation: creativeFadeIn ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+}
+#aboutDavid{
+    font-size:50px;
+    margin-bottom: 50px;
+    opacity: 0;
+    /* Animation Stuff */
+    animation: creativeFadeIn ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+ }
+#titleName4 {
+    opacity: 0;
+    /* Animation Stuff */
+    font-size:30px;
+    animation: creativeFadeIn ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
     
 }
-.nav{
-    grid-area: nav;
+
+#titleName5 {
+    opacity: 0;
+    /* Animation Stuff */
+    animation: creativeFadeIn ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+    font-size: 25px;
+    margin-bottom: 100px;
+}
+#titleName6 {
+    opacity: 0;
+    /* Animation Stuff */
+    animation: creativeFadeIn ease 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 7.5s;
+}
+
+
+
+
+/* Developer Coming Down Animation */
+@keyframes animationFrames{
+    0% {
+      opacity:0;
+      transform:  translate(0px,-1000px)  ;
+    }
+    100% {
+      opacity:1;
+      transform:  translate(0px,0px)  ;
+    }
+  }
+  /* Designer Going Up Animation */
+@keyframes designerFlyIn{
+    0% {
+      opacity:0;
+      transform:  translate(0px, 1000px)  ;
+    }
+    100% {
+      opacity:1;
+      transform:  translate(0px,0px)  ;
+    }
+  }
+  @keyframes creativeFadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+/* END NAME SECTION */
+
+
+
+/* START ABOUT ME SECTION */
+#me {
+    background-color: #08131E;
+}
+
+
+
+.aboutTextBox {
+    width: 800px;
+    height: 300px;
+    text-align: center;
     display: flex;
-    /* flex to have the nav A-links spaced evenly */
-    justify-content: space-evenly;
-    /* spaced evenly */
-    position: fixed;
-    /* wanted the nav bar to stay along the entire page */
-    width: 100%;
-     /* with fixed position, had to reset the x-axis */
-     background-color: rgba(255, 0, 0, 0.596);
-     z-index: 3;
+    flex-direction: column;
+    justify-content: center;
+
 }
-a{
-    margin-top:10px;
-    margin-bottom:15px;
-    /* wanted to even out the link to make it look like a box logo */
-    text-decoration: none;
-    color:white;
-    background-color:red;
-    margin-top:10px;
-    /* Nav links centered with margin, made to looks like box logo */  
+
+.story {
+    font-size: large;
 }
-.INFO{
-    grid-area: INS;
-    background:rgba(0, 0, 0, 0.644);
-    margin-bottom:-15px;
+/* END ABOUT ME SECTION */
+
+/* START SKILLS SECTION */
+
+#aboutSection{
+    background-image: url(./images/kawsjpg.jpg);
+    background-size: 100% 100%;
+    width:100%;
+    background-color: rgba(84, 117, 209, 0.582);
+    border:solid white;
 }
+
+.gridStyle {
+    height: 200px;
+    
+    
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+/* logos inside of the skills table in the skills section */
+#html {
+    background-image: url(http://icons.iconarchive.com/icons/cornmanthe3rd/plex/256/Other-html-5-icon.png); 
+}
+
+#css {
+    background-image: url(https://i2.wp.com/www.worldeatingdisordersday.org/wp-content/uploads/2016/03/css-logo.png);
+}
+
+#javaScript {
+    background-image: url(http://pluspng.com/img-png/logo-javascript-png-html-code-allows-to-embed-javascript-logo-in-your-website-587.png);
+}
+
+#express {
+    background-image: url(https://cdn-web.studio3t.com/knowledge-base/wp-content/uploads/expressjs-logo.png?x97270);
+}
+
+#nodejs {
+    background-image: url(https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png);
+}
+
+#react {
+    background-image: url(https://logos-download.com/wp-content/uploads/2016/09/React_logo_wordmark.png);
+}
+
+#python {
+    background-image: url(https://www.python.org/static/community_logos/python-logo-inkscape.svg);
+}
+
+#mongoDB {
+    background-image: url(https://doc.octoperf.com/monitoring/create-connection/mongodb/img/mongodb-logo.png);
+}
+
+#django {
+    background-image: url(http://www.indiainfotech.com/hire/img/django.png);
+}
+
+/* END SKILLS SECTION */
+
+/* START PROJECTS SECTION */
+
+#projexts {
+    background-color: #08131E;
+}
+
+#myCarousel {
+    border: 5px solid royalblue;
+}
+
+.pic {
+    max-width: 70vw;
+    max-height: 70vh;
+}
+
+.carousel-caption {
+    margin-bottom: 330px;
+}
+
+/* END PROJECTS SECTION */
+
+/* START CALL TO ACTION */
+
+#action {
+    background-color: #08131E;
+}
+
+.lineBoi {
+    border-bottom: 5px solid white;
+    border-width: 10px;
+    padding-bottom: 40px;
+    
+}
+
+.email {
+    height: 150px;
+    width: 150px; 
+    background-image: url("images/email.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.resume {
+    height: 150px;
+    width: 150px;
+    background-image: url("images/resume.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.gitHub {
+    height: 150px;
+    width: 150px;
+    background-image: url("images/github.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.phone {
+    height: 150px;
+    width: 150px;
+    background-image: url("https://cdn4.iconfinder.com/data/icons/rcons-phone/16/handset_round-2-512.png");
+    background-position: center;
+    background-size: cover;
+}
+
 #movingFont{
     /* keyframe font that moves across the header */
     font-weight: bold;
@@ -106,7 +369,7 @@ span{
 .iconContainer{
     display:flex;
     justify-content: space-evenly;
-    margin-top: 35px;
+    margin-top: 50px;
 }
 .icon1{
 height:100px;
@@ -147,6 +410,7 @@ background-size: 100% 100%;
 .infoContainer{
     display:flex;
     justify-content: space-evenly;
+    margin-top:20px;
 }
 .iconINFO{
    
@@ -158,146 +422,13 @@ background-size: 100% 100%;
     color:white;
     font-size: 20px;
 }
-#brand{
-    margin-left: 100px;
-    margin-right:100px;
-    font-size: 25px;
-    color:white;
-   
-}
-#aboutMe{
-    text-align: center;
-    font-weight: bold;
-   
-}
-.header{
-    grid-area:header;
-    background-color: rgba(255, 0, 0, 0.596);
-   
-}
 
-.key{
-    grid-area:key;
-    background:rgba(0, 0, 0, 0.644);
+.iconsection{
+    height:650px;
+    border:white solid;
 }
-.sum{
-    grid-area:sum;
-    font-size:20px;
-    font-weight: bold;
-    display:flex;
-    justify-content: center;
-    background-color: rgba(255, 0, 0, 0.596);
-    opacity:0.3;
-   
-}
-
-.para{
-    grid-area:para;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    opacity:0.3;
-    background-color: rgba(255, 0, 0, 0.596);
-}
-.para:hover{
-    opacity:1;
-    transition:2s;
-}
-.ed{
-    grid-area:ed;
-}
-.sk{
-    grid-area:sk;
-}
-
-.sum:hover{
-    opacity:1;
-    /* appears from 0 to 1 from hovering */
-    transition:2s;
-    /* smooth out the transition */
-}
-.frame{
-    display:flex;
-    /* moving the item via flex */
-    justify-content: center;
-    /* wanted the city name to be centered */
-   
- 
-    
-    /* don't want to take attention away from background pic. */
-    
-}
-
-
-#hoverinstruct{
-    color:white;
-    font-weight:bold;
-    text-shadow: 3px 3px 0px #000;
-    /* text shadow added for visual pop */
-    text-align: center;
-    
-}
-
-.headerline{
-    color:black;
-    font-size: 25px;
-   
-    text-align: center;
-    text-shadow: 3px 3px 0px rgba(12, 11, 11, 0.74);
-    border: solid;
-    
-}
-
-
-.h2a{
-    color:black;
-    text-shadow: 3px 3px 0px rgba(202, 186, 186, 0.493);
-    font-size: 50px;
-    margin: 100px;
-    text-align: center;
-    font-weight:bold;
-   
-}
-.align {
-    text-align: right;
-    color: aqua;
-    margin-right:10px;
-}
-.header1{
-    font-size:15px;
-}
-.burger{
-    /* <!-- parent div of the parllax --> */
-    background: url("images/retroburger.jpeg") 100% fixed no-repeat;
-    /* the parallax image */
-   background-size: 100% 100%;
-   /* no repeat */
-   border:solid;
-   /* /border shown */
-  
-}
-
-.lilburger {
-    /* child div used as a padding size parallax photos */
-    padding: 400px;
-    /* sizing of the photo */
-}
-.freeb{
-    /* <!-- parent div of the parllax --> */
-    background: url("images/future.jpeg") 100% fixed;
-    background-size: 100% 100%;
-    /* the parallax image */
-    
-    border:solid;
-    /* /border shown */
-
-}
-.lilfreeb{
-    /* child div used as a padding size parallax photos */
-    padding: 400px;
-    /* sizing of the photo */
-
-}
-#h1{
-    padding:0px;
-    
+#skills{
+    background-color: black;
+    border:solid white;
+    width:100vw;
 }

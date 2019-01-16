@@ -34,7 +34,7 @@ body {
 }
 
 #bam {
-   
+   background-image: url(./images/stars.jpg);
     background-position: center;
     background-size: 100% 100%;
     border:solid white;
@@ -198,7 +198,7 @@ body {
     background-image: url(./images/kawsjpg.jpg);
     background-size: 100% 100%;
     width:100%;
-    background-color: rgba(84, 117, 209, 0.582);
+    background-color:black;
     border:solid white;
 }
 
@@ -252,9 +252,6 @@ body {
 
 /* START PROJECTS SECTION */
 
-#projexts {
-    background-color: #08131E;
-}
 
 #myCarousel {
     border: 5px solid royalblue;
@@ -266,7 +263,9 @@ body {
 }
 
 .carousel-caption {
-    margin-bottom: 330px;
+    color:black;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 /* END PROJECTS SECTION */
@@ -284,37 +283,7 @@ body {
     
 }
 
-.email {
-    height: 150px;
-    width: 150px; 
-    background-image: url("images/email.png");
-    background-position: center;
-    background-size: cover;
-}
 
-.resume {
-    height: 150px;
-    width: 150px;
-    background-image: url("images/resume.png");
-    background-position: center;
-    background-size: cover;
-}
-
-.gitHub {
-    height: 150px;
-    width: 150px;
-    background-image: url("images/github.png");
-    background-position: center;
-    background-size: cover;
-}
-
-.phone {
-    height: 150px;
-    width: 150px;
-    background-image: url("https://cdn4.iconfinder.com/data/icons/rcons-phone/16/handset_round-2-512.png");
-    background-position: center;
-    background-size: cover;
-}
 
 #movingFont{
     /* keyframe font that moves across the header */
@@ -331,6 +300,8 @@ body {
     transition:1s;
     /* transition to make the cycle smoother */
     text-align: center;
+    animation-delay: 9s;
+
 }
 @keyframes move {
     /* 0% is the point at which is starts to animate*/
@@ -426,9 +397,20 @@ background-size: 100% 100%;
 .iconsection{
     height:650px;
     border:white solid;
+    background-image: url(/djxshin.github.io/images/stars.jpg);
+    background-size: 100% 100%;
 }
 #skills{
     background-color: black;
     border:solid white;
     width:100vw;
+    background-image: url(/djxshin.github.io/images/stars.jpg);
+    background-size: 100% 100%;
+}
+#projects{
+    background-color: black;
+    border:solid white;
+    width:100vw;
+    background-image: url(/djxshin.github.io/images/stars.jpg);
+    background-size: 100% 100%;
 }
